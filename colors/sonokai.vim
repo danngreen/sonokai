@@ -87,7 +87,7 @@ call sonokai#highlight('ErrorMsg', s:palette.red, s:palette.none, 'bold,underlin
 call sonokai#highlight('WarningMsg', s:palette.yellow, s:palette.none, 'bold')
 call sonokai#highlight('ModeMsg', s:palette.fg, s:palette.none, 'bold')
 call sonokai#highlight('MoreMsg', s:palette.blue, s:palette.none, 'bold')
-call sonokai#highlight('MatchParen', s:palette.none, s:palette.bg4)
+call sonokai#highlight('MatchParen', s:palette.none, s:palette.bg4, 'underline')
 call sonokai#highlight('NonText', s:palette.bg4, s:palette.none)
 call sonokai#highlight('Whitespace', s:palette.bg4, s:palette.none)
 call sonokai#highlight('SpecialKey', s:palette.bg4, s:palette.none)
