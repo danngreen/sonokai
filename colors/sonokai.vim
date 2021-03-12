@@ -245,15 +245,15 @@ else
   call sonokai#highlight('PurpleSign', s:palette.purple, s:palette.bg1)
 endif
 if s:configuration.diagnostic_text_highlight
-  call sonokai#highlight('ErrorText', s:palette.none, s:palette.diff_red, 'undercurl', s:palette.red)
-  call sonokai#highlight('WarningText', s:palette.none, s:palette.diff_yellow, 'undercurl', s:palette.yellow)
-  call sonokai#highlight('InfoText', s:palette.none, s:palette.diff_blue, 'undercurl', s:palette.blue)
-  call sonokai#highlight('HintText', s:palette.none, s:palette.diff_green, 'undercurl', s:palette.green)
+  call sonokai#highlight('ErrorText', s:palette.none, s:palette.diff_red) ", 'undercurl', s:palette.red)
+  call sonokai#highlight('WarningText', s:palette.none, s:palette.diff_yellow) ", 'undercurl', s:palette.yellow)
+  call sonokai#highlight('InfoText', s:palette.none, s:palette.diff_blue) ", 'undercurl', s:palette.blue)
+  call sonokai#highlight('HintText', s:palette.none, s:palette.diff_green) ", 'undercurl', s:palette.green)
 else
-  call sonokai#highlight('ErrorText', s:palette.none, s:palette.none, 'undercurl', s:palette.red)
-  call sonokai#highlight('WarningText', s:palette.none, s:palette.none, 'undercurl', s:palette.yellow)
-  call sonokai#highlight('InfoText', s:palette.none, s:palette.none, 'undercurl', s:palette.blue)
-  call sonokai#highlight('HintText', s:palette.none, s:palette.none, 'undercurl', s:palette.green)
+  call sonokai#highlight('ErrorText', s:palette.none, s:palette.none) ", 'undercurl', s:palette.red)
+  call sonokai#highlight('WarningText', s:palette.none, s:palette.none) ", 'undercurl', s:palette.yellow)
+  call sonokai#highlight('InfoText', s:palette.none, s:palette.none) ", 'undercurl', s:palette.blue)
+  call sonokai#highlight('HintText', s:palette.none, s:palette.none) ", 'undercurl', s:palette.green)
 endif
 if s:configuration.diagnostic_line_highlight
   call sonokai#highlight('ErrorLine', s:palette.none, s:palette.diff_red)
@@ -317,9 +317,9 @@ if (has('termguicolors') && &termguicolors) || has('gui_running')
   endif
   " 
 endif
-" 
-" Plugins: 
-" nvim-treesitter/nvim-treesitter 
+" }}}
+" Plugins: {{{
+" nvim-treesitter/nvim-treesitter {{{
 highlight! link TSAnnotation BlueItalic
 highlight! link TSAttribute BlueItalic
 highlight! link TSBoolean Purple
@@ -337,7 +337,7 @@ highlight! link TSFloat Purple
 highlight! link TSFuncBuiltin Green
 highlight! link TSFuncMacro Green
 highlight! link TSFunction Green
-highlight! link TSInclude BlueItalic
+highlight! link TSInclude RedItalic
 highlight! link TSKeyword Red
 highlight! link TSKeywordFunction Red
 highlight! link TSLabel Red
