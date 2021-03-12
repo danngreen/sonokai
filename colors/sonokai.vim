@@ -575,7 +575,8 @@ let g:fzf_colors = {
 call sonokai#highlight('TelescopeMatching', s:palette.green, s:palette.none, 'bold')
 highlight! link TelescopeBorder Grey
 highlight! link TelescopePromptPrefix Blue
-highlight! link TelescopeSelection DiffAdd
+call sonokai#highlight('highlightedLine', s:palette.none, s:palette.diff_yellow, 'bold')
+highlight! link TelescopeSelection highlightedLine 
 " 
 " Shougo/denite.nvim
 call sonokai#highlight('deniteMatchedChar', s:palette.green, s:palette.none, 'bold')
