@@ -245,15 +245,15 @@ else
   call sonokai#highlight('PurpleSign', s:palette.purple, s:palette.bg1)
 endif
 if s:configuration.diagnostic_text_highlight
-  call sonokai#highlight('ErrorText', s:palette.none, s:palette.diff_red, 'undercurl', s:palette.red)
-  call sonokai#highlight('WarningText', s:palette.none, s:palette.diff_yellow, 'undercurl', s:palette.yellow)
-  call sonokai#highlight('InfoText', s:palette.none, s:palette.diff_blue, 'undercurl', s:palette.blue)
-  call sonokai#highlight('HintText', s:palette.none, s:palette.diff_green, 'undercurl', s:palette.green)
+  call sonokai#highlight('ErrorText', s:palette.none, s:palette.diff_red) ", 'undercurl', s:palette.red)
+  call sonokai#highlight('WarningText', s:palette.none, s:palette.diff_yellow) ", 'undercurl', s:palette.yellow)
+  call sonokai#highlight('InfoText', s:palette.none, s:palette.diff_blue) ", 'undercurl', s:palette.blue)
+  call sonokai#highlight('HintText', s:palette.none, s:palette.diff_green) ", 'undercurl', s:palette.green)
 else
-  call sonokai#highlight('ErrorText', s:palette.none, s:palette.none, 'undercurl', s:palette.red)
-  call sonokai#highlight('WarningText', s:palette.none, s:palette.none, 'undercurl', s:palette.yellow)
-  call sonokai#highlight('InfoText', s:palette.none, s:palette.none, 'undercurl', s:palette.blue)
-  call sonokai#highlight('HintText', s:palette.none, s:palette.none, 'undercurl', s:palette.green)
+  call sonokai#highlight('ErrorText', s:palette.none, s:palette.none) ", 'undercurl', s:palette.red)
+  call sonokai#highlight('WarningText', s:palette.none, s:palette.none) ", 'undercurl', s:palette.yellow)
+  call sonokai#highlight('InfoText', s:palette.none, s:palette.none) ", 'undercurl', s:palette.blue)
+  call sonokai#highlight('HintText', s:palette.none, s:palette.none) ", 'undercurl', s:palette.green)
 endif
 if s:configuration.diagnostic_line_highlight
   call sonokai#highlight('ErrorLine', s:palette.none, s:palette.diff_red)
@@ -273,9 +273,9 @@ call sonokai#highlight('HintFloat', s:palette.green, s:palette.bg2)
 if &diff
   call sonokai#highlight('CurrentWord', s:palette.bg0, s:palette.green)
 elseif s:configuration.current_word ==# 'grey background'
-  call sonokai#highlight('CurrentWord', s:palette.none, s:palette.bg2)
+  call sonokai#highlight('CurrentWord', s:palette.none, s:palette.bg4)
 else
-  call sonokai#highlight('CurrentWord', s:palette.none, s:palette.none, s:configuration.current_word)
+  call sonokai#highlight('CurrentWord', s:palette.none, s:palette.none, s:configuration.current_word, s:palette.red)
 endif
 " }}}
 " }}}
@@ -320,8 +320,8 @@ endif
 " }}}
 " Plugins: {{{
 " nvim-treesitter/nvim-treesitter {{{
-highlight! link TSAnnotation BlueItalic
-highlight! link TSAttribute BlueItalic
+highlight! link TSAnnotation RedItalic
+highlight! link TSAttribute RedItalic
 highlight! link TSBoolean Purple
 highlight! link TSCharacter Yellow
 highlight! link TSComment Grey
@@ -337,7 +337,7 @@ highlight! link TSFloat Purple
 highlight! link TSFuncBuiltin Green
 highlight! link TSFuncMacro Green
 highlight! link TSFunction Green
-highlight! link TSInclude BlueItalic
+highlight! link TSInclude RedItalic
 highlight! link TSKeyword Red
 highlight! link TSKeywordFunction Red
 highlight! link TSLabel Red
